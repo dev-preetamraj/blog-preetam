@@ -22,6 +22,7 @@ const Navbar = () => {
     
         setOpenDrawer(false);
     };
+    const logo_url = 'https://blog-preetam.vercel.app/favicon.ico' || 'http://127.0.0.1:3000/favicon.ico';
     return (
         <AppBar position="static">
             <Toolbar disableGutters>
@@ -35,7 +36,7 @@ const Navbar = () => {
                     <LeftDrawer openDrawer={openDrawer} toggleDrawer={toggleDrawer}/>
                     <Box sx={{display: 'flex', alignItems: 'center', gap: 1}}>
                         <StyledLogo
-                            src="favicon.ico"
+                            src={logo_url}
                             alt="Logo"
                         />
                         <Typography variant="h3" sx={{fontFamily: 'Stylish', display: {xs: 'none', sm: 'block'}}}>Preetam</Typography>
