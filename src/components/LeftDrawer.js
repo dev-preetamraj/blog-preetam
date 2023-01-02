@@ -3,23 +3,29 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { useRouter } from "next/router";
 
 const LeftDrawer = ({openDrawer, toggleDrawer}) => {
+    const router = useRouter();
     const menuItem = [
         {
             text: 'Home',
+            nav_link: '/',
             icon: (<HomeOutlinedIcon />)
         },
         {
             text: 'Blog',
+            nav_link: '/blog',
             icon: (<BookOutlinedIcon />)
         },
         {
             text: 'About Us',
+            nav_link: '/about-us',
             icon: (<ContactsOutlinedIcon />)
         },
         {
             text: 'Contact Us',
+            nav_link: '/contact-us',
             icon: (<EmailOutlinedIcon />)
         }
     ]
@@ -38,7 +44,7 @@ const LeftDrawer = ({openDrawer, toggleDrawer}) => {
                         menuItem.map((item, index) => (
                             <Box key={item.text}>
                                 <ListItem disablePadding>
-                                    <ListItemButton>
+                                    <ListItemButton onClick={() => router.push(item.nav_link)}>
                                         <ListItemIcon>{item.icon}</ListItemIcon>
                                         <ListItemText primary={item.text} />
                                     </ListItemButton>

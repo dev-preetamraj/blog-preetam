@@ -1,6 +1,6 @@
 ---
-title: 'The First Post'
-excerpt: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae voluptates, ab architecto reiciendis quas, quisquam maiores quae sunt tenetur excepturi tempora voluptatum voluptate cumque, asperiores dolorem porro molestiae! Velit, dolorum?'
+title: 'About my project - CodeTogether'
+excerpt: 'Code Together is an online collaborative code compiler which uses the principle of socket programming to interact with all users present in a room group in real time. The underlying concept of this project is to connect users in a room and give them facility to code together, chat together and draw together.'
 image: 'https://i.natgeofe.com/n/665bbbca-1316-48b6-bce1-1ccb984a7546/0000014e-7468-d37e-a7de-ffe951310001_3x2.jpg'
 author: 'Preetam Raj'
 published_at: '2 January - 2023'

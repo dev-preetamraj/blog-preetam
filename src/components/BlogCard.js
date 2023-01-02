@@ -10,9 +10,9 @@ const BlogCard = ({post}) => {
     };
     
     return (
-        <Grid item xs={4} onClick={() => router.push(`blog/${post.slug}`)}>
-            <Card sx={{maxWidth: 375}}>
-                <CardActionArea>
+        <Grid item xs={12} sm={6} md={4}>
+            <CardActionArea>
+                <Card sx={{maxWidth: 375, minHeight: 400}} onClick={() => router.push(`blog/${post.slug}`)}>
                     <CardMedia 
                         component='img'
                         height={200}
@@ -21,15 +21,15 @@ const BlogCard = ({post}) => {
                         sx={{objectFit: 'contain', aspectRatio: '16/9', marginTop: 1}}
                     />
                     <CardContent>
-                        <Typography variant="h4">
+                        <Typography variant="h5" marginBottom={2}>
                             {post.frontmatter.title}
                         </Typography>
                         <Typography variant="body2">
                             {truncateText(post.frontmatter.excerpt)}
                         </Typography>
                     </CardContent>
-                </CardActionArea>
-            </Card>
+                </Card>
+            </CardActionArea>
         </Grid>
     );
 };
