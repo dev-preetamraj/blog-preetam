@@ -38,7 +38,7 @@ const BlogCardFlat = ({post: {frontmatter: {title, excerpt, image, author, publi
                     </ContentBox>
                     <FooterBox>
                         <Button
-                            sx={{color: theme.palette.text.primary}}
+                            sx={{color: theme.palette.text.primary, width: '10rem'}}
                             endIcon={clicked ? <CircularProgress size={15}/> : <ReadMoreOutlinedIcon />}
                             onClick={handleRouting}    
                         >
@@ -51,18 +51,20 @@ const BlogCardFlat = ({post: {frontmatter: {title, excerpt, image, author, publi
                             }
                         </Button>
                         <Divider orientation="vertical" flexItem />
-                        <TagBox>
-                            <Button>
-                                <Typography variant="caption" color={theme.palette.text.primary}>
-                                    Python
-                                </Typography>
-                            </Button>
-                        </TagBox>
-                        <MenuIconBox>
-                            <BookmarkAddOutlinedIcon className="footer-icon" />
-                            <ShareOutlinedIcon className="footer-icon" />
-                            <MoreHorizOutlinedIcon className="footer-icon" />
-                        </MenuIconBox>
+                        <Box sx={{display: 'flex', width: '70%', alignItems: 'center', justifyContent: 'space-between'}}>
+                            <TagBox>
+                                <Button>
+                                    <Typography variant="caption" color={theme.palette.text.primary}>
+                                        Python
+                                    </Typography>
+                                </Button>
+                            </TagBox>
+                            <MenuIconBox>
+                                <BookmarkAddOutlinedIcon className="footer-icon" />
+                                <ShareOutlinedIcon className="footer-icon" />
+                                <MoreHorizOutlinedIcon className="footer-icon" />
+                            </MenuIconBox>
+                        </Box>
                     </FooterBox>
                 </Grid>
                 <Grid item xs={3}>
@@ -94,19 +96,20 @@ const FooterBox = styled(Box)(() => ({
     marginBlock: 10,
     display: 'flex',
     alignItems: 'center',
-    gap: 10
+    justifyContent: 'space-between'
 }));
 const TagBox = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
-    gap: 10
+    gap: 2
 }));
 
 const MenuIconBox = styled(Box)(() => ({
     display: 'flex',
     alignItems: 'center',
-    marginLeft: 50,
-    gap: 10,
+    justifyContent: 'space-evenly',
+    gap: 5,
+    width: 'auto',
 
     '.footer-icon': {
         cursor: 'pointer',
