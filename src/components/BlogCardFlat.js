@@ -21,56 +21,58 @@ const BlogCardFlat = ({post: {frontmatter: {title, excerpt, image, author, publi
     };
 
     return (
-        <>
-            <Grid container spacing={2} marginBottom={2}>
-                <Grid item xs={9}>
-                    <AuthorBox>
-                        <Avatar sx={{width: 25, height: 25}}>P</Avatar>
-                        <Typography variant="subtitle2">{author}</Typography>
-                        <span>|</span>
-                        <Typography variant="caption">{published_at}</Typography>
-                    </AuthorBox>
-                    <ContentBox>
-                        <Typography variant="h5">{title}</Typography>
-                        <Typography variant="body3">
-                            {truncateText(excerpt)}
-                        </Typography>
-                    </ContentBox>
-                    <FooterBox>
-                        <Button
-                            sx={{color: theme.palette.text.primary, width: '10rem'}}
-                            endIcon={clicked ? <CircularProgress size={15}/> : <ReadMoreOutlinedIcon />}
-                            onClick={handleRouting}    
-                        >
-                            {
-                                clicked ? (
-                                    <Typography variant="caption">Redirecting ...</Typography>
-                                ) : (
-                                    <Typography variant="caption">Read More</Typography>
-                                )
-                            }
-                        </Button>
-                        <Divider orientation="vertical" flexItem />
-                        <Box sx={{display: 'flex', width: '70%', alignItems: 'center', justifyContent: 'space-between'}}>
-                            <TagBox>
-                                <Button>
-                                    <Typography variant="caption" color={theme.palette.text.primary}>
-                                        Python
-                                    </Typography>
-                                </Button>
-                            </TagBox>
-                            <MenuIconBox>
-                                <BookmarkAddOutlinedIcon className="footer-icon" />
-                                <ShareOutlinedIcon className="footer-icon" />
-                                <MoreHorizOutlinedIcon className="footer-icon" />
-                            </MenuIconBox>
-                        </Box>
-                    </FooterBox>
+        <>  
+            <Box>
+                <Grid container spacing={2} marginBottom={2}>
+                    <Grid item xs={9}>
+                        <AuthorBox>
+                            <Avatar sx={{width: 25, height: 25}}>P</Avatar>
+                            <Typography variant="subtitle2">{author}</Typography>
+                            <span>|</span>
+                            <Typography variant="caption">{published_at}</Typography>
+                        </AuthorBox>
+                        <ContentBox>
+                            <Typography variant="h5">{title}</Typography>
+                            <Typography variant="body3">
+                                {truncateText(excerpt)}
+                            </Typography>
+                        </ContentBox>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <img src={image} style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover'}} />
+                    </Grid>
                 </Grid>
-                <Grid item xs={3}>
-                    <img src={image} style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover'}} />
-                </Grid>
-            </Grid>
+                <FooterBox>
+                    <Button
+                        sx={{color: theme.palette.text.primary, width: '10rem'}}
+                        endIcon={clicked ? <CircularProgress size={15}/> : <ReadMoreOutlinedIcon />}
+                        onClick={handleRouting}    
+                    >
+                        {
+                            clicked ? (
+                                <Typography variant="caption">Redirecting ...</Typography>
+                            ) : (
+                                <Typography variant="caption">Read More</Typography>
+                            )
+                        }
+                    </Button>
+                    <Divider orientation="vertical" flexItem />
+                    <Box sx={{display: 'flex', width: '70%', alignItems: 'center', justifyContent: 'space-between'}}>
+                        <TagBox>
+                            <Button>
+                                <Typography variant="caption" color={theme.palette.text.primary}>
+                                    Python
+                                </Typography>
+                            </Button>
+                        </TagBox>
+                        <MenuIconBox>
+                            <BookmarkAddOutlinedIcon className="footer-icon" />
+                            <ShareOutlinedIcon className="footer-icon" />
+                            <MoreHorizOutlinedIcon className="footer-icon" />
+                        </MenuIconBox>
+                    </Box>
+                </FooterBox>
+            </Box>
             <Divider sx={{marginY: 3}} />
         </>
     );
