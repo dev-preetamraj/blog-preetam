@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap');
+
+.cursor-p {
+    cursor: pointer;
+}
 
 /**
  * Dracula Theme originally by Zeno Rocha [@zenorocha]

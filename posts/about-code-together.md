@@ -3,6 +3,8 @@ title: 'About my project - CodeTogether'
 excerpt: 'Code Together is an online collaborative code compiler which uses the principle of socket programming to interact with all users present in a room group in real time. The underlying concept of this project is to connect users in a room and give them facility to code together, chat together and draw together.'
 image: 'https://i.natgeofe.com/n/665bbbca-1316-48b6-bce1-1ccb984a7546/0000014e-7468-d37e-a7de-ffe951310001_3x2.jpg'
 author: 'Preetam Raj'
+read_min: 6
+tags: ['Python', 'Django']
 published_at: '2 January - 2023'
 ---
 

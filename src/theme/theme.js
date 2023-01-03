@@ -10,5 +10,11 @@ export const theme = createTheme({
         text: {
             primary: 'rgba(231, 227, 252, 0.87)'
         }
+    },
+    typography: {
+        body3: {
+            fontFamily: "'Source Sans Pro', sans-serif",
+            fontWeight: 300
+        }
     }
 });
