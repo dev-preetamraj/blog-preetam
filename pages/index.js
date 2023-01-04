@@ -1,10 +1,10 @@
-import React from 'react'
+import SocialIconStack from '../src/components/SocialIconStack';
 import Layout from '../src/hocs/Layout';
 
 const HomePage = () => {
   return (
     <Layout title='Preetam Raj'>
-        Hello
+        <SocialIconStack />
     </Layout>
   );
 };
