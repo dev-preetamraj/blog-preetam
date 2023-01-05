@@ -20,7 +20,7 @@ const StyledBox = styled(Box)(() => ({
     display: 'flex',
     flexDirection: 'column',
     gap: 10,
-    position: 'absolute',
+    position: 'fixed',
     left: 0,
     top: '30%',
     zIndex: 1000

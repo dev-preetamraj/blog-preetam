@@ -13,13 +13,13 @@ const SocialIcon = ({icon, link_to}) => {
 
 export default SocialIcon;
 
-const StyledPaper = styled(Paper)(() => ({
+const StyledPaper = styled(Paper)(({theme}) => ({
     height: 40,
     width: 40,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#fff',
+    color: theme.palette.text.primary,
     cursor: 'pointer',
     transition: 'all .8s ease',
 

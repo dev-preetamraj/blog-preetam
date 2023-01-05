@@ -24,7 +24,7 @@ const Navbar = () => {
     };
     const logo_url = 'https://blog-preetam.vercel.app/favicon.ico' || 'http://127.0.0.1:3000/favicon.ico';
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Toolbar disableGutters>
                 <Container
                     sx={{
