@@ -1,4 +1,5 @@
-import { Grid, styled, Typography, useTheme } from "@mui/material";
+import { Download } from "@mui/icons-material";
+import { Box, Button, Grid, styled, Typography, useTheme } from "@mui/material";
 
 const HeroSection = () => {
     const theme = useTheme();
@@ -23,10 +24,28 @@ const HeroSection = () => {
                 >
                     I am a <span style={{fontSize: '2.5rem', fontFamily: "'Rubik Bubbles', cursive"}}>Web Developer</span>
                 </Typography>
+                <InfoBox sx={{display: {xs: 'none', md: 'flex'}}}>
+                    <Typography variant="body3">
+                        I am from Patna, Bihar. I am currently a student pursuing B.Tech with majors in Mechanical Engineering and minors in Computer Science and Engineering at Indian Institute of Technology Mandi.
+                    </Typography>
+                    <Button endIcon={<Download />} variant='contained' color="primary">Download Resume</Button>
+                </InfoBox>
             </TitleGrid>
             <ImageGrid xs={12} md={6}>
-                <img src='/images/my-image.png' alt="Preetam" className="img" />
+                <StyledImg
+                    src='/images/my-image.png'
+                    alt="Preetam"
+                    sx={{
+                        width: {sm: '60%', lg: '100%'}
+                    }}
+                />
             </ImageGrid>
+            <InfoBox sx={{display: {xs: 'flex', md: 'none'}}}>
+                <Typography variant="body3" sx={{textAlign: 'center'}}>
+                    I am from Patna, Bihar. I am currently a student pursuing B.Tech with majors in Mechanical Engineering and minors in Computer Science and Engineering at Indian Institute of Technology Mandi.
+                </Typography>
+                <Button endIcon={<Download />} variant='contained' color="primary">Download Resume</Button>
+            </InfoBox>
         </Grid>
     );
 };
@@ -43,9 +62,22 @@ const TitleGrid = styled(Grid)(() => ({
 }));
 
 const ImageGrid = styled(Grid)(() => ({
-    '.img': {
-        width: '100%',
-        aspectRatio: '1/1',
-        objectFit: 'cover'
-    }
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+}));
+
+const InfoBox = styled(Box)(() => ({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
+    marginTop: 20
+}));
+
+const StyledImg = styled('img')(() => ({
+    width: '100%',
+    aspectRatio: '1/1',
+    objectFit: 'cover'
 }));
