@@ -22,7 +22,7 @@ const HeroSection = () => {
                     sx={{textAlign: 'center'}}
                     variant='h5'
                 >
-                    I am a <span style={{fontSize: '2.5rem', fontFamily: "'Rubik Bubbles', cursive"}}>Web Developer</span>
+                    I am a <span style={{fontSize: '2.5rem', fontFamily: "'Rubik Bubbles', cursive"}}>Web<span style={{fontFamily: "'Roboto', sans-serif"}}>/</span>App Developer</span>
                 </Typography>
                 <InfoBox sx={{display: {xs: 'none', md: 'flex'}}}>
                     <Typography variant="body3">
@@ -36,7 +36,7 @@ const HeroSection = () => {
                     src='/images/my-image.png'
                     alt="Preetam"
                     sx={{
-                        width: {sm: '60%', lg: '100%'}
+                        width: {sm: '60%', md: '100%'}
                     }}
                 />
             </ImageGrid>
@@ -72,7 +72,7 @@ const InfoBox = styled(Box)(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
+    gap: 20,
     marginTop: 20
 }));
 
