@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 
 const Experience = () => {
     return (
-        <Box sx={{marginY: 2}}>
+        <Box sx={{marginY: 5}}>
             <Typography variant='h3' sx={{textAlign: 'center', fontFamily: 'Stylish', marginBottom: 2}}>
                 Professional Experience
             </Typography>

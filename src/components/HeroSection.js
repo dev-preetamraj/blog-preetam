@@ -31,7 +31,7 @@ const HeroSection = () => {
                     <Button endIcon={<Download />} variant='contained' color="primary">Download Resume</Button>
                 </InfoBox>
             </TitleGrid>
-            <ImageGrid xs={12} md={6}>
+            <ImageGrid item xs={12} md={6}>
                 <StyledImg
                     src='/images/my-image.png'
                     alt="Preetam"
